@@ -87,6 +87,14 @@ public class TextModActivity extends ActionBarActivity {
     }
 
     /**
+     * callback method when clear button is pressed
+     */
+    public void clearButton(View view) {
+        EditText editText = (EditText)findViewById(R.id.editText);
+        editText.setText("");
+    }
+
+    /**
      * @see android.app.Activity#onCreateOptionsMenu(android.view.Menu)
      */
     @Override
