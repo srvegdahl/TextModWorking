@@ -16,6 +16,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import java.util.ArrayList;
@@ -73,6 +74,16 @@ public class TextModActivity extends ActionBarActivity {
         // define a listener for the spinner
         spinner.setOnItemSelectedListener(new MySpinnerListener());
 
+    }
+
+    /**
+     * callback method for "upper" button
+     */
+    public void upperButton(View view) {
+        EditText editText = (EditText)findViewById(R.id.editText);
+        String text = editText.getText().toString();
+        text = text.toUpperCase();
+        editText.setText(text);
     }
 
     /**
